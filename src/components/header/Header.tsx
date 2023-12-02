@@ -1,6 +1,6 @@
 import './Header.css';
 
-export default function Comp1() {
+export default function Header() {
     return (
         <div className='header'>
             <div className='header-logo'></div>
