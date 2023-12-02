@@ -9,7 +9,6 @@ export default function RodzajMetalu() {
       };
   return (
     <>
-    <form>
         <div className="radio">
           <label>
             <input
@@ -37,7 +36,6 @@ export default function RodzajMetalu() {
                 <option key={index} value={typ}>{typ}</option>
             ))}
         </select>
-    </form>
-              </>
+        </>
   )
 }

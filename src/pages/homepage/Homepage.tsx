@@ -8,7 +8,9 @@ export default function Homepage() {
         <>
         <Header/>
         <div className="main">
-            <RodzajMetalu/>
+            <form>
+                <RodzajMetalu/>
+            </form>
         </div>
         </>
     );
