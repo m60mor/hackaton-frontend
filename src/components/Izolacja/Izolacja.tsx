@@ -9,7 +9,7 @@ export default function Izolacja() {
     };
 
     return (
-        <>
+        <div className="form-isolation">
             Rodzaj tworzywa izolacyjnego	
             {typy.map((typ, index) => (
                 <div key={index}>
@@ -22,6 +22,6 @@ export default function Izolacja() {
                     />
                 </div>
             ))}
-        </>
+        </div>
     );
 }
