@@ -29,7 +29,7 @@ export default function Homepage() {
                 <Instalacja />
                 <Temperatura />
                 <Rezystencja />
-                <button type='submit' >Wyszukaj</button>
+                <button className='form-submit' type='submit' >Wyszukaj</button>
             </form>
         </div>
         {IsCalculated ? <ShowResults data={data}/> : <></>}

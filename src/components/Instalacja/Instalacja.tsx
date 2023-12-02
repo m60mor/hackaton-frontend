@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Instalacja() {
   return (
-    <div>Instalacja</div>
+    <div className='form-instalation'>Instalacja</div>
   )
 }
