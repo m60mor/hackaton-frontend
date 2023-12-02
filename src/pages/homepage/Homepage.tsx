@@ -16,19 +16,25 @@ export default function Homepage() {
         event.preventDefault();
         setIsCalculated(true)
         const data = await (await fetch('https://jsonplaceholder.typicode.com/todos/1')).json()
-        setData(data)
+        setData(dataArray)
+    }
+    // ['rodzajMetalu', 'izolacja', 'żyły','przekrój', 'instalacja', 'temperatura', 'rezystencja']
+    const dataArray: (string | number)[] = ['YDY', 'a', 'a', 0, 'A1', 0, 0.5]
+    function handleDataChange(value: string | number, index: number) {
+        dataArray[index] = value;
+        console.log(dataArray)
     }
     return( 
         <>
         <Header/>
         <div className="main">
             <form onSubmit={handleSubmit}>
-                <RodzajMetalu />
-                <Izolacja />
-                <Żyły />
-                <Instalacja />
-                <Temperatura />
-                <Rezystencja />
+                <RodzajMetalu handleDataChange={handleDataChange}/>
+                <Izolacja handleDataChange={handleDataChange}/>
+                <Żyły handleDataChange={handleDataChange}/>
+                <Instalacja handleDataChange={handleDataChange}/>
+                <Temperatura handleDataChange={handleDataChange}/>
+                <Rezystencja handleDataChange={handleDataChange}/>
                 <button className='form-submit' type='submit' >Wyszukaj</button>
             </form>
         </div>

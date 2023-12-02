@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
-
-export default function Żyły() {
+import React, { ReactElement, useState } from 'react'
+interface Iprops {
+  handleDataChange: (value: string | number, index: number) => void
+}
+export default function Żyły({
+  handleDataChange
+}: Iprops): ReactElement {
     const [izolacja, setIzolacja] = useState<number>(0);
     const żyły = ["układ jednofazowy (dwie żyły obciążone)",
 		"układ trójfazowy wielożyłowy (trzy żyły obciążone) ",
@@ -9,9 +13,11 @@ export default function Żyły() {
 
     const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setIzolacja(+event.target.value);
+        handleDataChange(String.fromCharCode(97 + +event.target.value), 2);
     };
     function handleTextareaChange(event: React.ChangeEvent<HTMLInputElement>): void {
         setPrzekrój(+event.target.value);
+        handleDataChange(+event.target.value, 3);
     }
 
   return (

@@ -1,15 +1,23 @@
-import React, { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
 
-export default function RodzajMetalu() {
+interface Iprops {
+  handleDataChange: (value: string | number, index: number) => void
+}
+export default function RodzajMetalu({
+  handleDataChange
+}: Iprops): ReactElement {
     const [rodzajMetalu, setRodzajMetalu] = useState<number>(0)
     const [rodzajMetaluDokładny, setRodzajMetaluDokładny] = useState<string>('')
     // const [typ, setTyp] = useState("")
     const typy = [['YDY', 'YDYp', 'YKY', 'YKXS', 'N2XH'], ['YAKXS']];
     const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setRodzajMetalu(+event.target.value);
+        setRodzajMetaluDokładny(typy[+event.target.value][0]);
+        handleDataChange(typy[+event.target.value][0], 0);
       };
     const handleRodzajChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setRodzajMetaluDokładny(event.target.value);
+        handleDataChange(event.target.value, 0);
     };
   return (
     <div className='form-major'>
@@ -39,7 +47,7 @@ export default function RodzajMetalu() {
       </div>
         <div className='form-minor'>
           {typy[rodzajMetalu].map((typ, index) => (
-              <div className='radio radio-podtype'>
+              <div className='radio radio-podtype' key={index}>
                 <label htmlFor={`${index}`}>{typ}
                   <input type='radio' value={typ} checked={rodzajMetaluDokładny === typ} onChange={handleRodzajChange}></input>
                 </label>

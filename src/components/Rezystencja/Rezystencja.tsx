@@ -1,10 +1,15 @@
-import { ChangeEvent, useState } from 'react'
-
-export default function Rezystencja() {
+import { ChangeEvent, ReactElement, useState } from 'react'
+interface Iprops {
+  handleDataChange: (value: string | number, index: number) => void
+}
+export default function Rezystencja({
+  handleDataChange
+}: Iprops): ReactElement {
   const [rezystencja, setRezystencja] = useState<number>(0);
 
   function handleRezystencjaChange(event: ChangeEvent<HTMLInputElement>): void {
     setRezystencja(Number(event.target.value));
+    handleDataChange(Number(+event.target.value), 6);
   }
 
   return (

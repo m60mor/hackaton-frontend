@@ -1,10 +1,15 @@
-import { ChangeEvent, useState } from 'react';
-
-export default function Temperatura() {
+import { ChangeEvent, ReactElement, useState } from 'react';
+interface Iprops {
+  handleDataChange: (value: string | number, index: number) => void
+}
+export default function Temperatura({
+  handleDataChange
+}: Iprops): ReactElement {
   const [temperatura, setTemperatura] = useState<number>(0);
 
   function handleTemperaturaChange(event: ChangeEvent<HTMLInputElement>): void {
     setTemperatura(Number(event.target.value));
+    handleDataChange(Number(+event.target.value), 5);
   }
 
   return (
