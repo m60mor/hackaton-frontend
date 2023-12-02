@@ -33,65 +33,10 @@ form {
     margin: 20px;
 }
 
-// .decor-cable1 {
-//     position: absolute;
-//     z-index: -1;
-//     bottom: 0;
-//     left: 0;
-//     width: 15%;
-//     height: 60%;
-//     border-top: 5px solid rgba(0, 170, 154, 0.7);
-//     border-right: 5px solid rgba(0, 170, 154, 0.7);
-//     border-radius: 0 50px 0;
-//   }
-// .decor-cable2 {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 96%;
-//     height: 98%;
-//     border-top: 5px solid rgba(190, 0, 0, 0.7);
-//     border-right: 5px solid rgba(190, 0, 0, 0.7);
-//     border-radius: 0 50px 0;
-// }
-// .decor-cable3 {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 96%;
-//     height: 98%;
-//     border-top: 5px solid rgba(0, 126, 17, 0.7);
-//     border-right: 5px solid rgba(0, 126, 17, 0.7);
-//     border-radius: 0 50px 0;
-// }
-  
-// .decor-rect1 {
-//     background: rgba(30, 30, 30, 0.12);
-//     position: absolute;
-//     z-index: -1;
-//     top: 15%;
-//     left: 0;
-//     width: 25%;
-//     height: 500px;
-//     border-radius: 0 50px 50px 0;
-// }
-  
-// .decor-rect2 {
-//     background: rgba(30, 30, 30, 0.15);
-//     position: absolute;
-//     z-index: -1;
-//     bottom: 0;
-//     right: 0;
-//     width: 500px;
-//     height: 500px;
-//     border-radius: 50px 0 0 0;
-// }
-
 .radio {
     flex: 1;
     margin: 5px;
     position: relative;
-    // background: #36E;
     width: 80px;
     height: 40px;
     padding: 0 10px 0 10px;
@@ -120,7 +65,6 @@ form {
     }
     &:has(input:checked) {
         background: #faf8f7;
-        // background: #ff5c0008;
         box-shadow: inset 7px 7px 14px #d3cac6,
                     inset -7px -7px 14px #eeeeee;
     }
@@ -131,7 +75,6 @@ form {
     flex: 1;
     position: relative;
     text-align: center;
-    // background: #36E;
     width: 80px;
     height: 40px;
     padding:  10px;
@@ -208,14 +151,10 @@ button[type="submit"] {
     cursor: pointer;
     &:hover {
         background: #ec9900;
-        // background: #ff5c0008;
-        // box-shadow: inset 7px 7px 14px #d3cac6,
-        //             inset -7px -7px 14px #eeeeee;
     }
     &:active {
         background: #faf8f7;
         color: black;
-        // background: #ff5c0008;
         box-shadow: inset 7px 7px 14px #d3cac6,
                     inset -7px -7px 14px #eeeeee;
     }
