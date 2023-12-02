@@ -1,1 +1,15 @@
-/*# sourceMappingURL=Comp1.css.map */
+.header {
+  background: #36E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.header-logo {
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 1px;
+  color: white;
+}/*# sourceMappingURL=Header.css.map */
