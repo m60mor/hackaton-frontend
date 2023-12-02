@@ -1,4 +1,4 @@
-import './Homepage.css'
+import './Homepage.scss'
 import Header from '../../components/header/Header';
 import RodzajMetalu from '../../components/RodzajMetalu/RodzajMetalu';
 import Izolacja from '../../components/Izolacja/Izolacja';

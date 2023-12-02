@@ -17,19 +17,22 @@ export default function Instalacja() {
     <div className="form-instalation">
 
         {miejsca.map((typ, index) => (
-            <>
-            <label htmlFor={`${index}`}>{typ}</label>
-            <input type='radio' value={index} checked={indexMiejsca === index} onChange={handleMiejsceChange}></input>
-            </>
+            <div className='radio'>
+            <label className='text-small' htmlFor={`${index}`}>{typ}
+              <input type='radio' value={index} checked={indexMiejsca === index} onChange={handleMiejsceChange}></input>
+            </label>
+            </div>
         ))}
-        </div>
-
+    </div>
+    <div className='form-instalation-elements'>
         {dokładneMiejsce[indexMiejsca].map((typ, index) => (
-            <>
-            <label htmlFor={`${index}`}>{typ}</label>
-            <input type='radio' value={index} checked={indexDokładneMiejsce === index} onChange={handleDokładneMiejsceChange}></input>
-            </>
+            <div className='radio'>
+            <label className='text-small' htmlFor={`${index}`}>{typ}
+              <input type='radio' value={index} checked={indexDokładneMiejsce === index} onChange={handleDokładneMiejsceChange}></input>
+            </label>
+            </div>
         ))}
+    </div>
     </>
   )
 }

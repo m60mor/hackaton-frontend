@@ -16,19 +16,22 @@ export default function Żyły() {
 
   return (
     <div className='form-strands'>
-    Liczba żył obciążonych
-    {żyły.map((typ, index) => (
-        <div key={index}>
-            <label htmlFor={`${index}`}>{typ}</label>
-            <input
-                type="radio"
-                value={index}
-                checked={izolacja === index}
-                onChange={handleOptionChange}
-            />
-        </div>
-    ))}
-    Przekrój żyły
+    <div>Liczba żył obciążonych</div>
+    <div className='form-strands-elements'>
+      {żyły.map((typ, index) => (
+          <div className="radio" key={index}>
+              <label className="text-tiny" htmlFor={`${index}`}>{typ}
+                <input
+                    type="radio"
+                    value={index}
+                    checked={izolacja === index}
+                    onChange={handleOptionChange}
+                />
+              </label>
+          </div>
+      ))}
+    </div>
+    <div>Przekrój żyły</div>
     <label htmlFor="przekrój"></label>
     <input type="number" id='przekrój' value={przekrój} onChange={handleTextareaChange}/>
 </div>

@@ -10,18 +10,21 @@ export default function Izolacja() {
 
     return (
         <div className="form-isolation">
-            Rodzaj tworzywa izolacyjnego	
-            {typy.map((typ, index) => (
-                <div key={index}>
-                    <label htmlFor={`${index}`}>{typ}</label>
-                    <input
-                        type="radio"
-                        value={index}
-                        checked={izolacja === index}
-                        onChange={handleOptionChange}
-                    />
-                </div>
-            ))}
+            <div>Rodzaj tworzywa izolacyjnego</div>
+            <div className="form-isolation-elements">
+                {typy.map((typ, index) => (
+                    <div className="radio" key={index}>
+                        <label className={`${typ === "tworzywo bezhalogenowe" ? "text-small" : ""}`} htmlFor={`${index}`}>{typ}
+                            <input 
+                                type="radio"
+                                value={index}
+                                checked={izolacja === index}
+                                onChange={handleOptionChange}
+                            />
+                        </label>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
