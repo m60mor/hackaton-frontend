@@ -24,10 +24,13 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 50px;
     width: max(min-content,70%);
     padding-inline: 7rem;
+    padding-bottom: 4rem;
     box-shadow:  19px 19px 41px #e2e2e2,
     -19px -19px 41px #e2e2e2;
+    margin: 20px;
 }
 
 // .decor-cable1 {
@@ -117,6 +120,101 @@ form {
     }
     &:has(input:checked) {
         background: #faf8f7;
+        // background: #ff5c0008;
+        box-shadow: inset 7px 7px 14px #d3cac6,
+                    inset -7px -7px 14px #eeeeee;
+    }
+}
+.input-number {
+    outline: none;
+    border: none;
+    flex: 1;
+    position: relative;
+    text-align: center;
+    // background: #36E;
+    width: 80px;
+    height: 40px;
+    padding:  10px;
+    border-radius: 50px;
+    background: #ffffff;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow: inset 6px 6px 12px #e0e0e0,
+                inset -6px -6px 12px #ffffff;
+    position: relative;
+}
+.slider + label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow: inset 6px 6px 12px #e0e0e0,
+                inset -6px -6px 12px #ffffff;
+    position: relative;
+    &:focus {
+        outline: none;
+    }
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow:  6px 6px 12px #d3cac6,
+                    -6px -6px 12px #eeeeee;
+        cursor: pointer;
+    }
+    &::-moz-range-thumb {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow:  6px 6px 12px #d3cac6,
+                    -6px -6px 12px #eeeeee;
+        cursor: pointer;
+    }
+    
+}
+button[type="submit"] {
+    background: #ffa500;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    margin-top: 30px;
+    padding:  10px;
+
+    box-shadow:  6px 6px 12px #d3cac6,
+                -6px -6px 12px #eeeeee;
+    cursor: pointer;
+    &:hover {
+        background: #ec9900;
+        // background: #ff5c0008;
+        // box-shadow: inset 7px 7px 14px #d3cac6,
+        //             inset -7px -7px 14px #eeeeee;
+    }
+    &:active {
+        background: #faf8f7;
+        color: black;
         // background: #ff5c0008;
         box-shadow: inset 7px 7px 14px #d3cac6,
                     inset -7px -7px 14px #eeeeee;

@@ -13,10 +13,10 @@ export default function Rezystencja({
   }
 
   return (
-    <div>
+    <div className='form-major'>
       <h2>Rezystywność cieplna gruntu w jednostce K*m/W</h2>
-      {/* <label htmlFor="form-resistation">Rezystencja:</label> */}
-      <input type="range" min={0.5} max={3} step={.05} id="przekrój" value={rezystencja} onChange={handleRezystencjaChange} />
+      <label htmlFor="przekrój">{rezystencja}K*m/W</label>
+      <input className="slider" type="range" min={0.5} max={3} step={.05} id="przekrój" value={rezystencja} onChange={handleRezystencjaChange} />
     </div>
   );
 }

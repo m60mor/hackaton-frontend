@@ -16,7 +16,7 @@ export default function Temperatura({
     <div className='form-major'>
       <h2>Temperatura otoczenia</h2>
       {/* <label htmlFor="przekrój">Temperatura:</label> */}
-      <input type="number" id="przekrój" value={temperatura} onChange={handleTemperaturaChange} />
+      <input className='input-number' type="number" id="przekrój" value={temperatura} onChange={handleTemperaturaChange} />
     </div>
   );
 }

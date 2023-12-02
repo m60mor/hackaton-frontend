@@ -6,10 +6,10 @@ interface Iprops {
 export default function RodzajMetalu({
   handleDataChange
 }: Iprops): ReactElement {
-    const [rodzajMetalu, setRodzajMetalu] = useState<number>(0)
-    const [rodzajMetaluDokładny, setRodzajMetaluDokładny] = useState<string>('')
-    // const [typ, setTyp] = useState("")
     const typy = [['YDY', 'YDYp', 'YKY', 'YKXS', 'N2XH'], ['YAKXS']];
+    const [rodzajMetalu, setRodzajMetalu] = useState<number>(0)
+    const [rodzajMetaluDokładny, setRodzajMetaluDokładny] = useState<string>(typy[0][0])
+    // const [typ, setTyp] = useState("")
     const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setRodzajMetalu(+event.target.value);
         setRodzajMetaluDokładny(typy[+event.target.value][0]);
