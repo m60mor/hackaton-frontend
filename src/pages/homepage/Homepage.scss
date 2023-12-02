@@ -33,6 +33,44 @@ form {
     margin: 20px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max(min-content,70%);
+    padding-inline: 7rem;
+    box-shadow:  19px 19px 41px #e2e2e2,
+    -19px -19px 41px #e2e2e2;
+}
+
+.response {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max(min-content,70%);
+    padding: 30px;
+    padding-inline: 7rem;
+    box-shadow:  19px 19px 41px #e2e2e2,
+    -19px -19px 41px #e2e2e2;
+}
+
+.response-data {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow:  -6px -6px 12px #e0e0e0, 6px 6px 12px #ffffff;
+    width: 150px;
+    height: 40px;
+    padding: 0 10px 0 10px;
+    border-radius: 50px;
+    margin: 5px;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .radio {
     flex: 1;
     margin: 5px;

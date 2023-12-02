@@ -27,15 +27,9 @@ export default function Homepage() {
     return( 
         <>
         <Header/>
-        <div className='decor-cable1'>
-            <div className='decor-cable2'>
-                <div className='decor-cable3'></div>
-            </div>
-        </div>
-        <div className='decor-rect1'></div>
-        <div className='decor-rect2'></div>
         <div className="main">
-            <form onSubmit={handleSubmit}>
+        {!IsCalculated ?
+            <form className='form' onSubmit={handleSubmit}>
                 <RodzajMetalu handleDataChange={handleDataChange}/>
                 <Izolacja handleDataChange={handleDataChange}/>
                 <Żyły handleDataChange={handleDataChange}/>
@@ -43,9 +37,9 @@ export default function Homepage() {
                 <Temperatura handleDataChange={handleDataChange}/>
                 <Rezystencja handleDataChange={handleDataChange}/>
                 <button className='form-submit' type='submit' >Wyszukaj</button>
-            </form>
+            </form> :
+        <ShowResults data={data}/>}
         </div>
-        {IsCalculated ? <ShowResults data={data}/> : <></>}
         </>
     );
 }
