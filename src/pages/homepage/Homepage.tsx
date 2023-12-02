@@ -1,4 +1,3 @@
-import React from 'react';
 import './Homepage.css'
 import Header from '../../components/header/Header';
 import RodzajMetalu from '../../components/RodzajMetalu/RodzajMetalu';
@@ -9,7 +8,7 @@ export default function Homepage() {
         <Header/>
         <div className="main">
             <form>
-                <RodzajMetalu/>
+                <RodzajMetalu />
             </form>
         </div>
         </>
