@@ -8,8 +8,17 @@
 }
 
 .header-logo {
+  flex: 1;
   font-size: 50px;
   font-weight: 700;
   text-shadow: 1px;
   color: white;
+  text-align: center;
+}
+
+.header-cable {
+  flex: 3;
+  height: 20px;
+  border-top: 5px solid #E33;
+  border-bottom: 5px solid #3E3;
 }/*# sourceMappingURL=Header.css.map */
