@@ -27,6 +27,13 @@ export default function Homepage() {
     return( 
         <>
         <Header/>
+        <div className='decor-cable1'>
+            <div className='decor-cable2'>
+                <div className='decor-cable3'></div>
+            </div>
+        </div>
+        <div className='decor-rect1'></div>
+        <div className='decor-rect2'></div>
         <div className="main">
             <form onSubmit={handleSubmit}>
                 <RodzajMetalu handleDataChange={handleDataChange}/>
