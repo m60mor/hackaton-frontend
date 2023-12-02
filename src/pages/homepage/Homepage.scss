@@ -3,88 +3,108 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     overflow-y: auto;
+    position: relative;
 }
-
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    background-image: url("/src/assets/power-lines-1868352_1920.jpg");
+    filter: opacity(0.05);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+* {
+    font-family: 'Inter', sans-serif;
+}
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: max(min-content,70%);
+    padding-inline: 7rem;
+    box-shadow:  19px 19px 41px #e2e2e2,
+    -19px -19px 41px #e2e2e2;
 }
 
-.decor-cable1 {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    width: 15%;
-    height: 60%;
-    border-top: 5px solid rgba(0, 170, 154, 0.7);
-    border-right: 5px solid rgba(0, 170, 154, 0.7);
-    border-radius: 0 50px 0;
-  }
-.decor-cable2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 96%;
-    height: 98%;
-    border-top: 5px solid rgba(190, 0, 0, 0.7);
-    border-right: 5px solid rgba(190, 0, 0, 0.7);
-    border-radius: 0 50px 0;
-}
-.decor-cable3 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 96%;
-    height: 98%;
-    border-top: 5px solid rgba(0, 126, 17, 0.7);
-    border-right: 5px solid rgba(0, 126, 17, 0.7);
-    border-radius: 0 50px 0;
-}
+// .decor-cable1 {
+//     position: absolute;
+//     z-index: -1;
+//     bottom: 0;
+//     left: 0;
+//     width: 15%;
+//     height: 60%;
+//     border-top: 5px solid rgba(0, 170, 154, 0.7);
+//     border-right: 5px solid rgba(0, 170, 154, 0.7);
+//     border-radius: 0 50px 0;
+//   }
+// .decor-cable2 {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 96%;
+//     height: 98%;
+//     border-top: 5px solid rgba(190, 0, 0, 0.7);
+//     border-right: 5px solid rgba(190, 0, 0, 0.7);
+//     border-radius: 0 50px 0;
+// }
+// .decor-cable3 {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 96%;
+//     height: 98%;
+//     border-top: 5px solid rgba(0, 126, 17, 0.7);
+//     border-right: 5px solid rgba(0, 126, 17, 0.7);
+//     border-radius: 0 50px 0;
+// }
   
-.decor-rect1 {
-    background: rgba(30, 30, 30, 0.12);
-    position: absolute;
-    z-index: -1;
-    top: 15%;
-    left: 0;
-    width: 25%;
-    height: 500px;
-    border-radius: 0 50px 50px 0;
-}
+// .decor-rect1 {
+//     background: rgba(30, 30, 30, 0.12);
+//     position: absolute;
+//     z-index: -1;
+//     top: 15%;
+//     left: 0;
+//     width: 25%;
+//     height: 500px;
+//     border-radius: 0 50px 50px 0;
+// }
   
-.decor-rect2 {
-    background: rgba(30, 30, 30, 0.15);
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    right: 0;
-    width: 500px;
-    height: 500px;
-    border-radius: 50px 0 0 0;
-}
+// .decor-rect2 {
+//     background: rgba(30, 30, 30, 0.15);
+//     position: absolute;
+//     z-index: -1;
+//     bottom: 0;
+//     right: 0;
+//     width: 500px;
+//     height: 500px;
+//     border-radius: 50px 0 0 0;
+// }
 
 .radio {
     flex: 1;
     margin: 5px;
     position: relative;
-    background: #36E;
+    // background: #36E;
     width: 80px;
     height: 40px;
     padding: 0 10px 0 10px;
-    border: 1px solid #2555DD;
-    border-radius: 10px;
+    border-radius: 50px;
+    background: #ffffff;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow:  -6px -6px 12px #e0e0e0,
+                 6px 6px 12px #ffffff;
     label {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
-        color: #fcfcfc;
+        color: black;
         font-size: 20px;
         font-weight: 600;
     }
@@ -96,7 +116,10 @@ form {
         margin: 0;
     }
     &:has(input:checked) {
-        background: #256;
+        background: #faf8f7;
+        // background: #ff5c0008;
+        box-shadow: inset 7px 7px 14px #d3cac6,
+                    inset -7px -7px 14px #eeeeee;
     }
 }
 

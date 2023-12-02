@@ -5,7 +5,7 @@ interface Iprops {
 export default function Rezystencja({
   handleDataChange
 }: Iprops): ReactElement {
-  const [rezystencja, setRezystencja] = useState<number>(0);
+  const [rezystencja, setRezystencja] = useState<number>(1);
 
   function handleRezystencjaChange(event: ChangeEvent<HTMLInputElement>): void {
     setRezystencja(Number(event.target.value));
@@ -14,7 +14,8 @@ export default function Rezystencja({
 
   return (
     <div>
-      <label htmlFor="form-resistation">Rezystencja:</label>
+      <h2>Rezystywność cieplna gruntu w jednostce K*m/W</h2>
+      {/* <label htmlFor="form-resistation">Rezystencja:</label> */}
       <input type="range" min={0.5} max={3} step={.05} id="przekrój" value={rezystencja} onChange={handleRezystencjaChange} />
     </div>
   );

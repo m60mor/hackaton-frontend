@@ -21,7 +21,8 @@ export default function Instalacja({
         handleDataChange(kod[indexMiejsca][+event.target.value], 4);
     };
   return (
-    <>
+    <div className='form-major'>
+      <h2>Sposób instalacji</h2>
     <div className="form-minor">
 
         {miejsca.map((typ, index) => (
@@ -41,6 +42,6 @@ export default function Instalacja({
             </div>
         ))}
     </div>
-    </>
+    </div>
   )
 }

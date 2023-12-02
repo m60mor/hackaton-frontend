@@ -21,6 +21,7 @@ export default function RodzajMetalu({
     };
   return (
     <div className='form-major'>
+      <h2>Rodzaj metalu żyły przewodzącej</h2>
       <div className='form-minor'>
         <div className="radio">
           <label>

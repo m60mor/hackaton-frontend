@@ -22,7 +22,7 @@ export default function Żyły({
 
   return (
     <div className='form-major form-strands'>
-    <div>Liczba żył obciążonych</div>
+    <h2>Liczba żył obciążonych</h2>
     <div className='form-minor'>
       {żyły.map((typ, index) => (
           <div className="radio" key={index}>
@@ -37,7 +37,7 @@ export default function Żyły({
           </div>
       ))}
     </div>
-    <div>Przekrój żyły</div>
+    <h2>Przekrój żył obciążonych</h2>
     <label htmlFor="przekrój"></label>
     <input type="number" id='przekrój' value={przekrój} onChange={handleTextareaChange}/>
 </div>

@@ -15,7 +15,7 @@ export default function Izolacja({
 
     return (
         <div className="form-major">
-            <div>Rodzaj tworzywa izolacyjnego</div>
+          <h2>Rodzaj tworzywa izolacyjnego</h2>
             <div className="form-minor">
                 {typy.map((typ, index) => (
                     <div className="radio" key={index}>
