@@ -15,9 +15,9 @@ export default function Żyły() {
     }
 
   return (
-    <div className='form-strands'>
+    <div className='form-major form-strands'>
     <div>Liczba żył obciążonych</div>
-    <div className='form-strands-elements'>
+    <div className='form-minor'>
       {żyły.map((typ, index) => (
           <div className="radio" key={index}>
               <label className="text-tiny" htmlFor={`${index}`}>{typ}

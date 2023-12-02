@@ -59,76 +59,23 @@ form {
     width: 40px;
 }
 
-.form-metal {
+.form-major {
     display: flex;
     flex-direction: column;
     width: 700px;
     padding: 10px;
 }
 
-.form-metal-type {
+.form-minor {
     display: flex;
     justify-content: space-between;
-    width: 700px;
-    padding: 5px;
-}
-
-.form-metal-podtype {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-isolation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 700px;
-}
-
-.form-isolation-elements {
-    display: flex;
     width: 700px;
 }
 
 .form-strands {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
     .radio {
         width: 150px;
     }
-}
-
-.form-strands-elements {
-    display: flex;
-    width: 700px;
-    padding: 5px;
-}
-
-.form-instalation {
-    display: flex;
-    justify-content: center;
-    width: 700px;
-    padding: 10px;
-}
-.form-instalation-elements {
-    display: flex;
-    width: 700px;
-}
-
-.form-temperature {
-    display: flex;
-    justify-content: center;
-    width: 700px;
-    padding: 10px;
-}
-
-.form-resistation {
-    display: flex;
-    justify-content: center;
-    width: 700px;
-    padding: 10px;
 }
 
 .form-submit {

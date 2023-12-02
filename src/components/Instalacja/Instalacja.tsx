@@ -14,7 +14,7 @@ export default function Instalacja() {
     };
   return (
     <>
-    <div className="form-instalation">
+    <div className="form-minor">
 
         {miejsca.map((typ, index) => (
             <div className='radio'>
@@ -24,7 +24,7 @@ export default function Instalacja() {
             </div>
         ))}
     </div>
-    <div className='form-instalation-elements'>
+    <div className='form-minor'>
         {dokładneMiejsce[indexMiejsca].map((typ, index) => (
             <div className='radio'>
             <label className='text-small' htmlFor={`${index}`}>{typ}

@@ -12,8 +12,8 @@ export default function RodzajMetalu() {
         setRodzajMetaluDokładny(event.target.value);
     };
   return (
-    <div className='form-metal'>
-      <div className='form-metal-type'>
+    <div className='form-major'>
+      <div className='form-minor'>
         <div className="radio">
           <label>
             <input
@@ -37,7 +37,7 @@ export default function RodzajMetalu() {
           </label>
         </div>
       </div>
-        <div className='form-metal-podtype'>
+        <div className='form-minor'>
           {typy[rodzajMetalu].map((typ, index) => (
               <div className='radio radio-podtype'>
                 <label htmlFor={`${index}`}>{typ}
