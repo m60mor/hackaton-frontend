@@ -28,7 +28,7 @@ export default function ShowResults(data: any) {
 
         <div className="img-container">
           <img src={`${images[cableNames?.findIndex((value)=>value === cable.cableType)]}`} width={200} height={200}></img>
-          {/* Kliknij aby zobaczy produkt na stronie NKT */}
+          <div className="description">Kliknij aby zobaczy produkt na stronie NKT</div>
         </div>
         </a>
         <div>CableType</div>
