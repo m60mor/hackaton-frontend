@@ -31,17 +31,17 @@ export default function ShowResults(data: any) {
           <div className="description">Kliknij aby zobaczy produkt na stronie NKT</div>
         </div>
         </a>
-        <div>CableType</div>
+        <div>Typ kabla</div>
         <div className="response-data">{cable.cableType}</div>
-        <div>Circuit</div>
+        <div>Przewód</div>
         <div className="response-data">{cable.circuit}</div>
-        <div>Number of cores</div>
+        <div>Liczba żył</div>
         <div className="response-data">{cable.numberOfCores}x{cable.przekroj}</div>
-        <div>Number of cores loaded</div>
+        <div>Liczba obciążonych żył</div>
         <div className="response-data">{cable.numberOfCoresLoaded}</div>
-        <div>Installation method</div>
+        <div>Sposób instalacji</div>
         <div className="response-data">{cable.installationMethod}</div>
-        <div >Reference method</div>
+        <div>Kod metody</div>
         <div className="response-data">{cable.referenceMethod}</div>
       </div> 
        )}

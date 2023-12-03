@@ -46,6 +46,7 @@ export default function RodzajMetalu({
           </label>
         </div>
       </div>
+      <h2>Typ przewodu</h2>
         <div className='form-minor'>
           {typy[rodzajMetalu].map((typ, index) => (
               <div className='radio radio-podtype' key={index}>
