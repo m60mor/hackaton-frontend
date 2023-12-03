@@ -40,10 +40,12 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 50px;
     padding-inline: 7rem;
+    padding-bottom: 4rem;
     box-shadow:  19px 19px 41px #e2e2e2,
     -19px -19px 41px #e2e2e2;
+    margin: 20px;
 }
 
 .response-data {
@@ -226,6 +228,13 @@ form {
         color: black;
         box-shadow: inset 7px 7px 14px #d3cac6,
                     inset -7px -7px 14px #eeeeee;
+    }
+}
+.img-container {
+    width: 100%;
+    img {
+        width: 100%;
+        object-fit: contain;
     }
 }
 
