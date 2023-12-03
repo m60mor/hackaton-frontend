@@ -36,7 +36,7 @@ export default function ShowResults(data: any) {
         <div>Circuit</div>
         <div className="response-data">{cable.circuit}</div>
         <div>Number of cores</div>
-        <div className="response-data">{cable.numberOfCores}</div>
+        <div className="response-data">{cable.numberOfCores}x{cable.przekroj}</div>
         <div>Number of cores loaded</div>
         <div className="response-data">{cable.numberOfCoresLoaded}</div>
         <div>Installation method</div>

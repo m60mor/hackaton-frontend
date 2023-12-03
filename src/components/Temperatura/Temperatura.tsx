@@ -1,25 +1,23 @@
-import { ChangeEvent, ReactElement, useState } from 'react';
+import { ChangeEvent, ReactElement, useState} from 'react';
 interface Iprops {
   handleDataChange: (value: string | number, index: number) => void,
   dataArray: (string | number)[],
-  refTemp: number
 }
 export default function Temperatura({
   handleDataChange,
   dataArray,
-  refTemp
 }: Iprops): ReactElement {
-  const [temperatura, setTemperatura] = useState<number>(0);
+  const [temperatura, setTemperatura] = useState<number>(Number(dataArray[5]));
   function handleTemperaturaChange(event: ChangeEvent<HTMLInputElement>): void {
     setTemperatura(Number(event.target.value));
-    handleDataChange(Number(+event.target.value), 5);
+    handleDataChange(Number(event.target.value), 5);
   }
 
   return (
     <div className='form-major'>
       <h2>Temperatura otoczenia</h2>
       {/* <label htmlFor="przekrój">Temperatura:</label> */}
-      <input className='input-number' type="number" id="przekrój" value={temperatura == 0 ? refTemp : temperatura} onChange={handleTemperaturaChange} />
+      <input className='input-number' type="number" id="przekrój" value={temperatura} onChange={handleTemperaturaChange} />
       {dataArray[0] === 'YKY' && temperatura > 70 && <p className='text-small'>Temperatura otoczenia nie może być większa niż 70°C dla metalu YKY</p>}
       {dataArray[0] === 'YKXS' && temperatura > 90 && <p className='text-small'>Temperatura otoczenia nie może być większa niż 90°C dla metalu YKXS</p>}
       {dataArray[0] === 'YAKXS' && temperatura > 90 && <p className='text-small'>Temperatura otoczenia nie może być większa niż 90°C dla metalu YAKXS</p>}
