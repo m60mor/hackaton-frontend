@@ -11,18 +11,16 @@ import ShowResults from '../../components/ShowResults/ShowResults';
 
 export default function Homepage() {
     const [IsCalculated, setIsCalculated] = useState<Boolean>(false)
-    const [data, setData] = useState<any>(null)
+    const [data, setData] = useState<(string | number)[]>(['YDY', 'a', 'a', 0, 'A1', 0, 0.5])
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        setIsCalculated(true)
-        const data = await (await fetch('https://jsonplaceholder.typicode.com/todos/1')).json()
-        setData(dataArray)
+        setIsCalculated(true);
+        setData(dataArray);
     }
-    // ['rodzajMetalu', 'izolacja', 'żyły','przekrój', 'instalacja', 'temperatura', 'rezystencja']
     const dataArray: (string | number)[] = ['YDY', 'a', 'a', 0, 'A1', 0, 0.5]
     function handleDataChange(value: string | number, index: number) {
         dataArray[index] = value;
-        console.log(dataArray)
+        setData(dataArray);
     }
     return( 
         <>
@@ -33,8 +31,8 @@ export default function Homepage() {
                 <RodzajMetalu handleDataChange={handleDataChange}/>
                 <Izolacja handleDataChange={handleDataChange}/>
                 <Żyły handleDataChange={handleDataChange}/>
-                <Instalacja handleDataChange={handleDataChange}/>
-                <Temperatura handleDataChange={handleDataChange}/>
+                <Instalacja handleDataChange={handleDataChange} dataArray={data}/>
+                <Temperatura handleDataChange={handleDataChange} dataArray={data}/>
                 <Rezystencja handleDataChange={handleDataChange}/>
                 <button className='form-submit' type='submit' >Wyszukaj</button>
             </form> :

@@ -84,6 +84,11 @@ form {
     background: #ffffff;
     box-shadow:  -6px -6px 12px #e0e0e0,
                  6px 6px 12px #ffffff;
+    &:has(input:disabled) {
+        background: #efefef;
+        box-shadow: none;
+        label {color: #bbbbbb}
+    }
     label {
         display: flex;
         justify-content: center;
