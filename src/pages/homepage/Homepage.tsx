@@ -12,11 +12,11 @@ import ShowResults from '../../components/ShowResults/ShowResults';
 export default function Homepage() {
     const [IsCalculated, setIsCalculated] = useState<Boolean>(false)
     const [data, setData] = useState<(string | number)[]>(['YDY', 'a', 'a', 0, 'A1', 0, 0.5])
+    const [dataArray, setDataArray] = useState<(string | number)[]>(['YDY', 'a', 'a', 0, 'A1', 0, 0.5]);
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         setIsCalculated(true)
-        // const data = await (await fetch('https://jsonplaceholder.typicode.com/todos/1')).json()
-        const data = await (await fetch('http://ec2-54-227-117-32.compute-1.amazonaws.com:8080/filter-cables', 
+        const newData = await (await fetch('http://ec2-54-227-117-32.compute-1.amazonaws.com:8080/filter-cables', 
         {
             method: "POST",
             headers: {
@@ -24,21 +24,21 @@ export default function Homepage() {
             },
             body: JSON.stringify({
                 "material": "a",
-                "isolation": "a",
-                "coresLoaded": "a",
-                "typeOfInstalation": "D2",
-                "temperature": "20",
-                "soilResistivity": "1",
+                "isolation": dataArray[1],
+                "coresLoaded": dataArray[2],
+                "typeOfInstalation": dataArray[4].toString(),
+                "temperature": dataArray[5].toString(),
+                "soilResistivity": dataArray[6].toString(),
                 "power": "50000",
                 "cos": 0.8
               })
         })).json()
-        setData(data[0])
+        setData(newData[0])
     }
-    const dataArray: (string | number)[] = ['YDY', 'a', 'a', 0, 'A1', 0, 0.5]
     function handleDataChange(value: string | number, index: number) {
-        dataArray[index] = value;
-        setData(dataArray);
+        const newDataArray = [...dataArray];
+        newDataArray[index] = value;
+        setDataArray(newDataArray);
     }
     return( 
         <>
