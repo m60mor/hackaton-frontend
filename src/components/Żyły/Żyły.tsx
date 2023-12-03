@@ -37,9 +37,6 @@ export default function Żyły({
           </div>
       ))}
     </div>
-    <h2>Przekrój żył obciążonych</h2>
-    <label htmlFor="przekrój"></label>
-    <input className="input-number" type="number" id='przekrój' value={przekrój} onChange={handleTextareaChange}/>
 </div>
   )
 }
