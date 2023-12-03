@@ -20,12 +20,15 @@
 * {
     font-family: 'Inter', sans-serif;
 }
+h2 {
+    text-align: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 50px;
-    width: max(min-content,70%);
     padding-inline: 7rem;
     padding-bottom: 4rem;
     box-shadow:  19px 19px 41px #e2e2e2,
@@ -33,21 +36,10 @@ form {
     margin: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: max(min-content,70%);
-    padding-inline: 7rem;
-    box-shadow:  19px 19px 41px #e2e2e2,
-    -19px -19px 41px #e2e2e2;
-}
-
 .response {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: max(min-content,70%);
     padding: 30px;
     padding-inline: 7rem;
     box-shadow:  19px 19px 41px #e2e2e2,
@@ -61,9 +53,9 @@ form {
     align-items: center;
     position: relative;
     box-shadow:  -6px -6px 12px #e0e0e0, 6px 6px 12px #ffffff;
-    width: 150px;
+    width: 400px;
     height: 40px;
-    padding: 0 10px 0 10px;
+    padding: 10px;
     border-radius: 50px;
     margin: 5px;
     color: black;
@@ -75,13 +67,10 @@ form {
     flex: 1;
     margin: 5px;
     position: relative;
-    width: 80px;
-    height: 40px;
-    padding: 0 10px 0 10px;
+    height: 55px;
     border-radius: 50px;
     background: #ffffff;
     border-radius: 50px;
-    background: #ffffff;
     box-shadow:  -6px -6px 12px #e0e0e0,
                  6px 6px 12px #ffffff;
     &:has(input:disabled) {
@@ -217,17 +206,19 @@ button[type="submit"] {
 }
 
 .form-major {
+    align-items: stretch;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 700px;
+    width: 100%;
     padding: 10px;
 }
 
 .form-minor {
+    flex: 1;
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 100%;
 }
 
 .form-strands {
@@ -238,4 +229,30 @@ button[type="submit"] {
 
 .form-submit {
     width: 40%;
+}
+
+@media only screen and (max-width: 900px){
+    .form-minor {
+        .radio {
+            height: 60px;
+            border-radius: 15px;
+        }
+    }
+    form {
+        padding-inline: 2rem;
+    }
+}
+
+@media only screen and (max-width: 580px){
+    .form-minor {
+        flex-wrap: wrap;
+        .radio {
+            min-width: 70px;
+            height: 90px;
+            border-radius: 15px;
+        }
+    }
+    form {
+        margin: 20px 0 0 0;
+    }
 }

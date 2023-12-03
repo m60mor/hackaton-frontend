@@ -9,7 +9,7 @@ export default function ShowResults(data: any) {
 "https://www.nkt.com.pl/imgproxy/xvDrxmCnItz7F2d-4tLn2tIRqYc_o-L5t2wnOzBE0JI/rt:fit/w:704/h:0/g:ce/ex:1/el:1/aHR0cHM6Ly9ua3Qud2lkZW4ubmV0L2NvbnRlbnQvcGtzNXlnbWhvci9wbmcvTk9QT1ZJQy1OMlhILnBuZz9sYXN0TW9kaWZpZWQ9VGh1K0p1bCswNCsxNSUzQTU4JTNBMjIrQ0VTVCsyMDE5.jpeg",
 "https://www.nkt.com.pl/imgproxy/eR5Z7NHYCGmqv4lY3C4eVY0WGq1HrSHMLrbbJ36XbwA/rt:fit/w:704/h:0/g:ce/ex:1/el:1/aHR0cHM6Ly9ua3Qud2lkZW4ubmV0L2NvbnRlbnQvODR3YW5kYnh6ei9wbmcvWW5LWS5wbmc_bGFzdE1vZGlmaWVkPUZyaStTZXArMDQrMTUlM0E0NiUzQTM2K0NFU1QrMjAyMA.jpeg"]
   useEffect(() => {
-    console.log(data)
+    console.log(data.data)
     fetchProductPageData('kable-1-kv/ykxs-0-6-1-kv.html')
   }, [data])
   return (
@@ -17,19 +17,19 @@ export default function ShowResults(data: any) {
       {data.data &&
       <>
       <div>CableType</div>
-      <div className="response-data">{data.data[0]}</div>
+      <div className="response-data">{data.data.cableType}</div>
       <div>Circuit</div>
-      <div className="response-data">{data.data[1]}</div>
+      <div className="response-data">{data.data.circuit}</div>
       <div>Number of cores</div>
-      <div className="response-data">{data.data[2]}</div>
+      <div className="response-data">{data.data.numberOfCores}</div>
       <div>Number of cores loaded</div>
-      <div className="response-data">{data.data[3]}</div>
+      <div className="response-data">{data.data.numberOfCoresLoaded}</div>
       <div>Installation method</div>
-      <div className="response-data">{data.data[4]}</div>
+      <div className="response-data">{data.data.installationMethod}</div>
       <div >Reference method</div>
-      <div className="response-data">{data.data[5]}</div>
+      <div className="response-data">{data.data.referenceMethod}</div>
       <div>conductor cross section</div>
-      <div className="response-data">{data.data[6]}</div> </>}
+       </>}
       <img src={`${images[0]}`}></img>
     </div>
   )

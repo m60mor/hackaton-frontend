@@ -8,7 +8,7 @@ export default function Instalacja({
   dataArray
 }: Iprops): ReactElement {
     const [indexMiejsca, setIndexMiejsca] = useState<number>(0)
-    const miejsca = ['w ścianie izolowanej cieplnie', 'w rurze instalacyjnej na ścianie/murze', 'w powietrzu', 'w ziemi']
+    const miejsca = ['w ścianie izolowanej cieplnie', 'w rurze instalacyjnej ściana/mur', 'w powietrzu', 'w ziemi']
     const [indexDokładneMiejsce, setIndexDokładneMiejsce] = useState<number>(0)
     // const [typ, setTyp] = useState("")
     const dokładneMiejsce = [['bezpośrednio', 'w rurze instalacyjnej'], ['dla kabli jednożyłowych','dla kabli i przewodów wielożyłowych'], ['dla kabli jednożyłowych','dla kabli i przewodów wielożyłowych'], ['w rurze', 'bezpośrednio w ziemi']];

@@ -14,8 +14,26 @@ export default function Homepage() {
     const [data, setData] = useState<(string | number)[]>(['YDY', 'a', 'a', 0, 'A1', 0, 0.5])
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        setIsCalculated(true);
-        setData(dataArray);
+        setIsCalculated(true)
+        // const data = await (await fetch('https://jsonplaceholder.typicode.com/todos/1')).json()
+        const data = await (await fetch('http://ec2-54-227-117-32.compute-1.amazonaws.com:8080/filter-cables', 
+        {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                "material": "a",
+                "isolation": "a",
+                "coresLoaded": "a",
+                "typeOfInstalation": "D2",
+                "temperature": "20",
+                "soilResistivity": "1",
+                "power": "50000",
+                "cos": 0.8
+              })
+        })).json()
+        setData(data[0])
     }
     const dataArray: (string | number)[] = ['YDY', 'a', 'a', 0, 'A1', 0, 0.5]
     function handleDataChange(value: string | number, index: number) {
