@@ -169,28 +169,6 @@ form {
     }
     
 }
-button[type="submit"] {
-    background: #ffa500;
-    outline: none;
-    border: none;
-    border-radius: 50px;
-    color: white;
-    margin-top: 30px;
-    padding:  10px;
-
-    box-shadow:  6px 6px 12px #d3cac6,
-                -6px -6px 12px #eeeeee;
-    cursor: pointer;
-    &:hover {
-        background: #ec9900;
-    }
-    &:active {
-        background: #faf8f7;
-        color: black;
-        box-shadow: inset 7px 7px 14px #d3cac6,
-                    inset -7px -7px 14px #eeeeee;
-    }
-}
 
 .text-small {
     font-size: 15px !important;
@@ -229,6 +207,26 @@ button[type="submit"] {
 
 .form-submit {
     width: 40%;
+    background: #ffa500;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    margin-top: 30px;
+    padding:  10px;
+
+    box-shadow:  6px 6px 12px #d3cac6,
+                -6px -6px 12px #eeeeee;
+    cursor: pointer;
+    &:hover {
+        background: #ec9900;
+    }
+    &:active {
+        background: #faf8f7;
+        color: black;
+        box-shadow: inset 7px 7px 14px #d3cac6,
+                    inset -7px -7px 14px #eeeeee;
+    }
 }
 
 @media only screen and (max-width: 900px){

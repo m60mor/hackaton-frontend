@@ -10,9 +10,10 @@ export default function ShowResults(data: any) {
 "https://www.nkt.com.pl/imgproxy/eR5Z7NHYCGmqv4lY3C4eVY0WGq1HrSHMLrbbJ36XbwA/rt:fit/w:704/h:0/g:ce/ex:1/el:1/aHR0cHM6Ly9ua3Qud2lkZW4ubmV0L2NvbnRlbnQvODR3YW5kYnh6ei9wbmcvWW5LWS5wbmc_bGFzdE1vZGlmaWVkPUZyaStTZXArMDQrMTUlM0E0NiUzQTM2K0NFU1QrMjAyMA.jpeg"]
   useEffect(() => {
   }, [data])
+  console.log(data.data);
   return (
-    <div className="response">
-      {data.data &&
+    <>
+      {data.data ?
       <>
       <div>CableType</div>
       <div className="response-data">{data.data.cableType}</div>
@@ -27,8 +28,12 @@ export default function ShowResults(data: any) {
       <div >Reference method</div>
       <div className="response-data">{data.data.referenceMethod}</div>
       <div>conductor cross section</div>
-       </>}
-      <img src={`${images[0]}`}></img>
-    </div>
+       </> :
+       <>
+        <p>Nie znaleziono pasujących kabli</p>
+       </>
+       }
+      {/* <img src={`${images[0]}`}></img> */}
+    </>
   )
 }
