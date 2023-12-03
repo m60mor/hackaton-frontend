@@ -7,7 +7,7 @@ import Moc from '../../components/Moc/Moc';
 import Instalacja from '../../components/Instalacja/Instalacja';
 import Temperatura from '../../components/Temperatura/Temperatura';
 import Rezystencja from '../../components/Rezystencja/Rezystencja';
-import { useState, useEffect} from 'react';
+import { useState } from 'react';
 import ShowResults from '../../components/ShowResults/ShowResults';
 
 export default function Homepage() {

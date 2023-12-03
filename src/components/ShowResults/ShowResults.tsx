@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-import { fetchProductPageData } from "../Utils/ResponseConverter"
 
 export default function ShowResults(data: any) {
   const cableNames = ["YDY 450/750 V", "YDYp 450/750 V", "YKY 0,6/1kV", "YAKXS 0,6/1kV", "N2XH 0,6/1kV", "YKXS 0,6/1kV"]
