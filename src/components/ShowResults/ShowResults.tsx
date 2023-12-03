@@ -5,7 +5,7 @@ export default function ShowResults(data: any) {
   const cableNames = ["YDY 450/750 V", "YDYp 450/750 V", "YKY 0,6/1kV", "YAKXS 0,6/1kV", "N2XH 0,6/1kV", "YKXS 0,6/1kV"]
   const links = [
     "przewody-instalacyjne/ydy-450-750-v",
-    "przewody-instalacyjne/ydy-450-750-v",
+    "przewody-instalacyjne/nkt-instal-ydyp-450-750-v",
     "kable-1-kv/yky-0-6-1-kv",
     "kable-1-kv/yakxs-0-6-1-kv",
     "kable-1-kv/nopovic-n2xh-0-6-1-kv",
@@ -22,7 +22,7 @@ export default function ShowResults(data: any) {
   console.log(data.data);
   return (
     <>
-      {data.data.map((cable, index)=>
+      {data.data.map((cable : any, index : any)=>
       <div className="cable" key={index}>
         <a href={`https://www.nkt.com.pl/produkty-rozwiazania/niskie-napiecie/${links[cableNames?.findIndex((value)=>value === cable.cableType)]}`}>
 

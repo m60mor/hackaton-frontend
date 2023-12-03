@@ -41,6 +41,7 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    padding-top: 20px;
     padding-inline: 7rem;
     padding-bottom: 4rem;
     box-shadow:  19px 19px 41px #e2e2e2,
@@ -56,13 +57,14 @@ form {
     position: relative;
     box-shadow:  -6px -6px 12px #e0e0e0, 6px 6px 12px #ffffff;
     width: 400px;
-    height: 40px;
+    height: 50px;
     padding: 10px;
     border-radius: 50px;
     margin: 5px;
     color: black;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .radio {
@@ -230,9 +232,18 @@ form {
                     inset -7px -7px 14px #eeeeee;
     }
 }
+
+.cable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .img-container {
     width: 100%;
     position: relative;
+    margin-top: 30px;
+    border-top: 1px solid rgba(33, 33, 33, 0.3);
     img {
         width: 100%;
         object-fit: contain;
